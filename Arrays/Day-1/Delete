@@ -1,1 +1,51 @@
+//Delete from Beginning!
+class Main {
+    public static void main(String[] args) {
+        int[] a = new int[]{10,12,32,38,39,44,0};
+        int c = 0;
+        for(int num : a){
+            if(num != 0){
+                c++;
+            }
+            else break;
+        }
+        for(int i=0; i<c-1; i++){
+            a[i] = a[i+1];
+        }
+        System.out.println("Delete from Beginning!");
+        for(int i=0; i<a.length; i++){
+        System.out.println(a[i]);
+        }
+    }
+}
+------------------------------------------------------------
+// Delete from End
+class Main {
+    public static void main(String[] args) {
+        int[] a = {10, 12, 32, 38, 39, 44};
+        int c = a.length;
+        a[c - 1] = 0;
+        System.out.println("Delete from End!");
+        for (int i = 0; i < c - 1; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
+--------------------------------------------------------------
+// Delete at Specific Position
+class Main {
+    public static void main(String[] args) {
+        int[] a = {10, 12, 32, 38, 39, 44};
+        int pos = 3;
+        int index = pos - 1;
+        for (int i = index; i < a.length - 1; i++) {
+            a[i] = a[i + 1];
+        }
+        a[a.length - 1] = 0;
+        System.out.println("Delete at Position " + pos + ":");
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
 
